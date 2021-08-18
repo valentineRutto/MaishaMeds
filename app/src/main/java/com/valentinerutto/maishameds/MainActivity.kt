@@ -15,9 +15,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setOnclickListener()
+
     }
 
     private fun setOnclickListener(){
+
+        binding.fabPost.setOnClickListener {
+
+        }
 
     }
 
