@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+//    id 'com.diffplug.gradle.spotless'
 }
 
 android {
@@ -32,7 +33,9 @@ android {
     buildFeatures{
         viewBinding = true
     }
+
 }
+
 
 dependencies {
 

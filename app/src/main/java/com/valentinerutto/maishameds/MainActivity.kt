@@ -3,6 +3,8 @@ package com.valentinerutto.maishameds
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.valentinerutto.maishameds.databinding.ActivityMainBinding
+//what we would like is an Android Activity that hits the /posts endpoint of https://jsonplaceholder.typicode.com/ and creates a new post.
+//This activity should allow users to input the content of the post.
 
 class MainActivity : AppCompatActivity() {
 

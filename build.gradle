@@ -7,7 +7,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.0"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21"
-
+        classpath 'com.diffplug.spotless:spotless-plugin-gradle:5.14.2'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -17,7 +17,37 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-//plugins{
-//    id("com.diffplug.spotless") version "5.14.2"
+//subprojects {
+//    apply(plugin = "com.diffplug.spotless")
+//    configure<SpotlessExtension> {
+//        kotlin {
+//            target(fileTree(".") {
+//                include("**/*.kt")
+//                exclude("spotless/copyright.kt", "**/build/**")
+//            })
+//            ktlint("0.42.1")
+//            licenseHeaderFile(rootProject.file("spotless/copyright.kt"))
 //
+//            trimTrailingWhitespace()
+//            endWithNewline()
+//        }
+//        format("misc") {
+//            target("**/*.md", "**/.gitignore")
+//
+//            trimTrailingWhitespace()
+//            indentWithTabs()
+//            endWithNewline()
+//        }
+//        java {
+//            target("src/*/java/**/*.java")
+//            googleJavaFormat("1.7").aosp()
+//            indentWithSpaces()
+//            licenseHeaderFile(rootProject.file("spotless/copyright.java"))
+//            removeUnusedImports()
+//        }
+//        groovyGradle {
+//            target("**/*.gradle")
+//        }
+//    }
 //}
+
