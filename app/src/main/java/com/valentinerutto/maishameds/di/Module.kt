@@ -1,5 +1,6 @@
 package com.valentinerutto.maishameds.di
 
+import com.valentinerutto.maishameds.data.PostsRepository
 import com.valentinerutto.maishameds.network.ApiService
 import com.valentinerutto.maishameds.ui.viewmodel.PostsViewModel
 import okhttp3.OkHttpClient
@@ -47,5 +48,10 @@ val viewModelModule = module {
     }
 
 }
-val koinModules = listOf(viewModelModule, appModule)
+val repoModule = module {
+    single {
+        PostsRepository(get())
+    }
+}
+val koinModules = listOf(viewModelModule, appModule,repoModule)
 
