@@ -1,4 +1,4 @@
-package com.valentinerutto.maishameds
+package com.valentinerutto.maishameds.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
