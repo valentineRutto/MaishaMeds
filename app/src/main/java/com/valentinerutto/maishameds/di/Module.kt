@@ -44,7 +44,7 @@ private fun provideApiService(retrofit: Retrofit): ApiService =
 
 val viewModelModule = module {
     viewModel {
-        PostsViewModel()
+        PostsViewModel(get())
     }
 
 }

@@ -3,4 +3,10 @@
     <string name="post">Create Post</string>
     <string name="post_hint">Post</string>
     <string name="title_hint">Title</string>
+    <string name="dialog_title">Creating Post ...</string>
+    <string name="empty_error_message">Title or post cannot be empty</string>
+    <string name="post_success">Post Created Successfully</string>
+    <string name="success">Success</string>
+    <string name="network_error">Network Error</string>
+    <string name="server_error">Server Error</string>
 </resources>
