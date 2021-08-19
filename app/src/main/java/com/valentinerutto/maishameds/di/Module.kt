@@ -46,12 +46,10 @@ val viewModelModule = module {
     viewModel {
         PostsViewModel(get())
     }
-
 }
 val repoModule = module {
     single {
         PostsRepository(get())
     }
 }
-val koinModules = listOf(viewModelModule, appModule,repoModule)
-
+val koinModules = listOf(viewModelModule, appModule, repoModule)

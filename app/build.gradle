@@ -1,8 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-//    id 'com.diffplug.gradle.spotless'
 }
+
+apply plugin: 'com.diffplug.spotless'
 
 android {
     compileSdk 31
@@ -33,9 +34,30 @@ android {
     buildFeatures{
         viewBinding = true
     }
-
 }
 
+spotless {
+    // optional: limit format enforcement to just the files changed by this feature branch
+    ratchetFrom 'origin/master'
+
+    format 'misc', {
+        // define the files to apply `misc` to
+        target '**/*.gradle', '**/*.md', '**/.gitignore'
+
+        // define the steps to apply to those files
+        indentWithSpaces()
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+
+    kotlin {
+        target '**/*.kt'
+        ktlint("0.40.0")
+        trimTrailingWhitespace()
+        indentWithSpaces()
+        endWithNewline()
+    }
+}
 
 dependencies {
 

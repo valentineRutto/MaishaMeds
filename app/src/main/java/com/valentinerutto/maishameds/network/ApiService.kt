@@ -9,9 +9,8 @@ import retrofit2.http.POST
 
 interface ApiService {
     @GET("/posts")
-    suspend fun getPosts():Response<PostResponse>
+    suspend fun getPosts(): Response<PostResponse>
 
     @POST("/posts")
-    suspend fun createPost(@Body postBody: PostBody) : Response<PostResponse.PostResponseItem>
-
+    suspend fun createPost(@Body postBody: PostBody): Response<PostResponse.PostResponseItem>
 }
